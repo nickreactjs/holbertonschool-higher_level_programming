@@ -11,4 +11,5 @@ elif lastnumber == 0:
     detail = "0"
 else:
     detail = "less than 6 and not 0"
-print("Last digit of {:d} is {:d} and is {}".format(number, lastnumber, detail))
+sentence = "Last digit of {:d} is {:d} and is {}"
+print(sentence.format(number, lastnumber, detail))
