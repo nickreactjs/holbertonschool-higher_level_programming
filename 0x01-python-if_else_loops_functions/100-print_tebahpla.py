@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-for i in range(90, 64,-1):
-    print(chr(i+32)+chr(i), end='')
+for i in range(90, 64, -1):
+    if i % 2 == 0:
+        j = 32
+    else:
+        j = 0
+    print(chr(i+j), end='')
