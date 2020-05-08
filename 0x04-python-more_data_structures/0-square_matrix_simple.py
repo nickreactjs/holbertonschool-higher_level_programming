@@ -1,3 +1,8 @@
 #!/usr/bin/python3
+
+
 def square_matrix_simple(matrix=[]):
-    return list(map(lambda submat: list(map(lambda e: e**2, submat)), matrix))
+    sm = []
+    for idx in matrix:
+        sm.append(list(map(lambda x: x**2, idx)))
+    return (sm)
