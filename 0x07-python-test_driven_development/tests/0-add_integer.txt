@@ -35,7 +35,7 @@ Test two integers:
 
 Test two big integers:
 
-    >>> add_integer(99999999, 99999999
+    >>> add_integer(99999999, 99999999)
     199999998
 
 Test positive, negative integers:
@@ -50,7 +50,7 @@ Test negative, positive integers:
 
 Test integer and float
 
-    >>> add_integer(50, 50,2)
+    >>> add_integer(50, 50.2)
     100
 
 Test infinity:
