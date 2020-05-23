@@ -29,3 +29,27 @@ Test division by negative:
 Test division by inf:
     >>> matrix_divided([[2, 4, 8], [1, 2, 3]], float("inf"))
     [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test Divide by 0:
+    >>> matrix_divided([[2, 2], [2, 2]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+Test 1st arg none:
+    >>> matrix_divided(none, 1)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'none' is not defined
+
+Test empty matrix:
+    >>> matrix_divided([[]], 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test 1st arg str:
+    >>> matrix_divided("string", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
