@@ -53,3 +53,21 @@ Test 1st arg str:
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test first argument empty list:
+    >>> matrix_divided([], 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test division by non number:
+    >>> matrix_divided([[2]], "check")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Test no arguments:
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
