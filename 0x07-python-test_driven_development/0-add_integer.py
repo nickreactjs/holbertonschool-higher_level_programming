@@ -5,7 +5,7 @@
 def add_integer(a, b=98):
     """Add Integer
 
-    ArgsL
+    Args:
         a: first int
         b: second int
 
