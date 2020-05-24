@@ -50,9 +50,12 @@ Missing 2 args:
     Traceback (most recent call last):
     ...
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+<<<<<<< HEAD
 
 Test floats:
     >>> say_my_name(3.0, 1.0)
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
+=======
+>>>>>>> 4a14f16f130ffba698a8cd8cf3a618e5c3046545
