@@ -18,6 +18,7 @@ class Rectangle:
     @property
     def width(self):
         '''Property for the width of the rectangle.
+
         Raises:
             TypeError: If width is not an integer.
             ValueError: If width is less than 0.
@@ -35,6 +36,7 @@ class Rectangle:
     @property
     def height(self):
         '''Property for the height of the rectangle.
+
         Raises:
             TypeError: If height is not an integer.
             ValueError: If height is less than 0.
@@ -48,3 +50,27 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        '''Returns area of this rectangle.'''
+        return self.width * self.height
+
+    def perimeter(self):
+        '''Returns perimeter of this rectangle.'''
+        if not self.width or not self.height:
+            return 0
+        return (self.width + self.height) * 2
+
+    def __str__(self):
+        '''Returns string representation.'''
+        if not self.width or not self.height:
+            return ""
+        return (("#" * self.width + "\n") * self.height)[:-1]
+
+    def __repr__(self):
+        '''Returns formal string representation...'''
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+
+    def __del__(self):
+        '''Called at instance deletion.'''
+        print("Bye rectangle...")
