@@ -30,7 +30,7 @@ class Base:
         '''Unjsonifies a dictionary.'''
         if json_string is None or not json_string:
             return []
-        return loads(json_string)
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
