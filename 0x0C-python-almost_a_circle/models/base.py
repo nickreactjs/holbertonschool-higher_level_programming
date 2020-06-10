@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''Module for Base class.'''
-from json import dumps, loads
+"""Module for Base class."""
+import json
 import csv
 
 
@@ -23,7 +23,7 @@ class Base:
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
-            return dumps(list_dictionaries)
+            return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
