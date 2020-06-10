@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module for Rectangle class."""
+"""Module for a Rectangle class."""
 from models.base import Base
 
 
 class Rectangle(Base):
-    '''A Rectangle class.'''
+    """A Rectangle class."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''Constructor.'''
@@ -16,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''Width of this rectangle.'''
+        """Width of this rectangle."""
         return self.__width
 
     @width.setter
