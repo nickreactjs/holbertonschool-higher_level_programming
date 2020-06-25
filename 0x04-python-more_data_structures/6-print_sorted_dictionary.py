@@ -2,6 +2,6 @@
 
 
 def print_sorted_dictionary(a_dictionary):
-    sd = sorted(a_dictionary)
-    for ti in sd:
-        print("{}: {}".format(ti, a_dictionary[ti]))
+    new = sorted(list(a_dictionary.keys()))
+    for i in new:
+        print("{}: {}".format(i, a_dictionary.get(i)))
