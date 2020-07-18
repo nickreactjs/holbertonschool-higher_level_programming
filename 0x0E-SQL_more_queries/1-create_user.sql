@@ -1,7 +1,6 @@
--- Creates user
--- create user
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
--- grant privs
+-- Creat euser user_0d_1
+-- all privileges, password = user_0d_1_pwd
+CREATE USER IF NOT EXISTS
+	'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
--- flush
-FLUSH PRIVILEGES;
+FLUSH PRIVILGES;
