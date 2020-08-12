@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-"""This module contains a Square class."""
+"""Square module"""
 
 
 class Square:
-    """ This class defines a square."""
+    """square class
+
+    Attributes:
+        size
+
+        """
 
     def __init__(self, size=0):
         if not isinstance(size, int):
