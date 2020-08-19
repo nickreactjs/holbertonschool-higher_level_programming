@@ -1,68 +1,46 @@
-The "0-add_integer" nodule
-==========================
+The add_integers module
+=======================
 
-Using "add_integer"
--------------------
+Using ''add_integer''
+---------------------
 
-Import function from module:
+Import
 
-    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
 
-Test one int argument:
+Test two ints
+
+    >>> add_integer(2,3)
+    5
+
+Test one int
 
     >>> add_integer(2)
     100
 
-Test one int argument and check default second:
+Test one string
 
-    >>> add_integer(0)
-    98
-
-Test one float:
-
-    >>> add_integer(123.0)
-    221
-
-Test one negative float:
-
-    >>> add_integer(-95.5)
-    3
-
-Test two integers:
-
-    >>> add_integer(11, 5)
-    16
-
-Test two big integers:
-
-    >>> add_integer(99999999, 99999999)
-    199999998
-
-Test positive, negative integers:
-
-    >>> add_integer(15, -15)
-    0
-
-Test negative, positive integers:
-
-    >>> add_integer(-10, 20)
-    10
-
-Test integer and float
-
-    >>> add_integer(50, 50.2)
-    100
-
-Test infinity:
-
-    >>> add_integer(float("inf"), float("-inf"))
-    Traceback (most recent call last):
-    ...
-    OverflowError: cannot convert float infinity to integer
-
-Test invalid first arg
-
-    >>> add_integer("test", 0)
+    >>> add_integer('2')
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+Test high number
+
+    >>> add_integer(9*10**99, 9 * 10**99)
+    18000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+b is list
+
+    >>> add_integer(2, [2,2])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+a is infinity
+
+    >>> import math
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
