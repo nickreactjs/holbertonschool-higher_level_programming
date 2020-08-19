@@ -7,6 +7,7 @@ Using ''add_integer''
 Import
 
     >>> add_integer = __import__('0-add_integer').add_integer
+    >>> import math
 
 Test two ints
 
@@ -44,3 +45,17 @@ a is infinity
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
+float overflow
+
+    >>> add_integer(99.0**999999999, 1)
+    Traceback (most recent call last):
+    ...
+    OverflowError: (34, 'Numerical result out of range')
+
+check for Nan
+
+    >>> add_integer(float("nan"))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
