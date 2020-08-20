@@ -6,6 +6,12 @@ import math
 
 
 def matrix_divided(matrix, div):
+    """ divide matrix
+    Args:
+    matrix: list of list of integers
+    div: integer or float divident
+    returns: new list
+    """
     check = 0
     check2 = 0
     if not isinstance(matrix, list):
