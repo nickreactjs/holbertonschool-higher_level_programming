@@ -1,0 +1,28 @@
+The say my name module
+======================
+
+Using say_my_name
+-----------------
+
+import
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> import math
+
+check integer
+
+    >>> say_my_name(1, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+check one argument
+
+    >>> say_my_name('Nick')
+    My name is Nick 
+
+infinity
+
+    >>> say_my_name(float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
