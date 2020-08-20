@@ -10,6 +10,8 @@ def matrix_divided(matrix, div):
     check2 = 0
     if not isinstance(matrix, list):
         check = 1
+    if len(matrix) == 0:
+        check = 1
     for i in matrix:
         if not isinstance(i, list):
             check = 1
@@ -21,6 +23,8 @@ def matrix_divided(matrix, div):
         lenr = len(matrix[0])
         if len(i) != lenr:
             check2 = 1
+        if len(i) == 0:
+            check = 1
     if check == 1:
         raise TypeError('matrix must be a matrix (list of lists) \
 of integers/floats')
