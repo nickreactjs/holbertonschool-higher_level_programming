@@ -111,5 +111,10 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """class method"""
+        """class method
+        Args:
+            cls
+            size
+        Returns: new instance of cls
+        """
         return cls(size, size)
