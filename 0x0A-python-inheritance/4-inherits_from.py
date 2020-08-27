@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Module for inherits_from method."""
+""" Only sub class of Module."""
 
 
 def inherits_from(obj, a_class):
-    """Determien if an object is a subclass of a_class."""
-    return isinstance(obj, a_class) and type(obj) != a_class
+    """ Check if is subclass. """
+    if isinstance(obj, a_class) and type(obj) != a_class:
+        return True
+    else:
+        return False
