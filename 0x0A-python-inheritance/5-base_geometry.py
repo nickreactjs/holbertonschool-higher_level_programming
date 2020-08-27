@@ -2,7 +2,7 @@
 """ Module for Basegeometry class. """
 
 
-class Basegeometry:
+class BaseGeometry:
     """ This is the BaseGeometry class."""
 
     pass
