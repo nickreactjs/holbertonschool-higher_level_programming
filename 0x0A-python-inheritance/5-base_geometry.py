@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Module for BaseGeometry class."""
+""" Module for Basegeometry class. """
 
 
-class BaseGeometry:
-    """An empy class."""
+class Basegeometry:
+    """ This is the BaseGeometry class."""
+
     pass
