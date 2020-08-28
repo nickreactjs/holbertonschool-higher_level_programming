@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-'''Module for number_of_lines method.'''
+""" Number of lines module. """
 
 
 def number_of_lines(filename=""):
-    '''Method for reading from file.'''
-    with open(filename, "r", encoding="utf-8") as f:
-        return len(f.readlines())
+    """ Return number of lines in a file. """
+    lines = 0
+    with open(filename, 'r') as f:
+        for _ in f:
+            lines += 1
+    return lines
