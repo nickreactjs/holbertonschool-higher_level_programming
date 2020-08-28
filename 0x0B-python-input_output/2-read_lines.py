@@ -1,16 +1,12 @@
 #!/usr/bin/python3
-'''Module for read_lines method.'''
+""" Read n lines Module. """
 
 
 def read_lines(filename="", nb_lines=0):
-    '''Method for reading lines from file.'''
-    with open(filename, "r", encoding="utf-8") as f:
-        if nb_lines <= 0:
-            print(f.read(), end="")
-            return
-
+    nb = 0
+    with open(filename, 'r') as f:
         for line in f:
-            print(line, end="")
-            nb_lines -= 1
-            if nb_lines <= 0:
+            if nb >= nb_lines and not nb_lines <= 0:
                 break
+            print(line, end='')
+            nb += 1
