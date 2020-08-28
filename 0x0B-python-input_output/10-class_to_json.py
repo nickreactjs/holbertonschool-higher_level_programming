@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-'''Module for class_to_json method.'''
+""" Class to JSON Module. """
+import json
 
 
 def class_to_json(obj):
-    '''Returns dictionary description of json object.'''
-    if hasattr(obj, "__dict__"):
+    """ Return the dictionary description with simple data data
+        structure for JSON serialization of an object. """
+    if hasattr(obj, '__dict__'):
         return obj.__dict__.copy()
     else:
         return {}
