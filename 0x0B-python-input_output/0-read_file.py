@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module for read_file method."""
+""" Read file module. """
 
 
-def read_file(filename=''):
-    """Method for reading from file."""
-    with open(filename, 'r', encoding="utf-8") as f:
-        text = f.read()
-        print(text, end='')
+def read_file(filename=""):
+    """ read a text file and print it to stdout. """
+    with open(filename) as f:
+        for line in f:
+            print(line, end='')
