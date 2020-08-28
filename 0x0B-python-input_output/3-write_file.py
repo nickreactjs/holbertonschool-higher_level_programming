@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-'''Module for write_file method.'''
+""" Write to a file module. """
 
 
 def write_file(filename="", text=""):
-    '''Method for reading lines from file.'''
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+    """ Write a string to a tesxt file and
+    return the number of chars written. """
+    with open(filename, 'w', encoding="utf-8") as f:
+        f.write(text)
+    return len(text)
