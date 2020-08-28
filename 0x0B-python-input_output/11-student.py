@@ -1,15 +1,16 @@
 #!/usr/bin/python3
-'''Module for Studen class.'''
+"""Student to JSON Module. """
 
 
 class Student:
-    '''Class for jsonification.'''
+    """ Student class. """
+
     def __init__(self, first_name, last_name, age):
-        '''Constructor.'''
+        """ INIT """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self):
-        '''Retrieves dictionary.'''
+        """ retrieve a dictionary represantion of a Student instance """
         return self.__dict__.copy()
