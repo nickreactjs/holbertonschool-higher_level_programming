@@ -3,6 +3,7 @@
 
 
 def read_lines(filename="", nb_lines=0):
+    """ Read up to n lines. """
     nb = 0
     with open(filename, 'r') as f:
         for line in f:
