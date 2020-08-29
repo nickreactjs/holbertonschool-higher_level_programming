@@ -23,7 +23,7 @@ class Student:
         if check == 1:
             loop = self.__dict__.copy()
             adic = {}
-            for k, v in loop:
+            for k, v in loop.items():
                 if k in attrs:
                     adic[k] = v
             return adic
