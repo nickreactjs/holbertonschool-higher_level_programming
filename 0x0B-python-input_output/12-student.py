@@ -20,10 +20,9 @@ class Student:
                     check = 1
         else:
             check = 1
-        if check == 1:
-            loop = self.__dict__.copy()
+        if check == 0:
             adic = {}
-            for k, v in loop.items():
+            for k, v in self.__dict__.items():
                 if k in attrs:
                     adic[k] = v
             return adic
