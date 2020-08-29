@@ -1,18 +1,29 @@
 #!/usr/bin/python3
-'''Module for Student class.'''
+"""Student to JSON Module. """
 
 
 class Student:
-    '''Class for jsonification.'''
+    """ Student class. """
+
     def __init__(self, first_name, last_name, age):
-        '''Constructor.'''
+        """ INIT """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        '''Retrieves dictionary with filter.'''
-        if type(attrs) is list and all([type(x) == str for x in attrs]):
-            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        """ retrieve a dictionary represantion of a Student instance """
+        check = 0
+        if isinstance(attrs, list):
+            for i in attrs:
+                if not isinstance(i, str):
+                    check = 1
+        if check == 1:
+            loop = self.__dict__.copy()
+            adic = {}
+            for k, v in loop:
+                if k in attrs:
+                    adic[k] = v
+            return adic
         else:
             return self.__dict__.copy()
