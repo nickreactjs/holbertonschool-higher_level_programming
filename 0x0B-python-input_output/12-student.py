@@ -14,10 +14,12 @@ class Student:
     def to_json(self, attrs=None):
         """ retrieve a dictionary represantion of a Student instance """
         check = 0
-        if isinstance(attrs, list):
+        if type(attrs) is list:
             for i in attrs:
                 if not isinstance(i, str):
                     check = 1
+        else:
+            check = 1
         if check == 1:
             loop = self.__dict__.copy()
             adic = {}
