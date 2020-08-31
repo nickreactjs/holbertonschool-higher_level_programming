@@ -74,3 +74,8 @@ class Rectangle(Base):
         the character #"""
         row = "#" * self.width + '\n'
         print(row * self.height, end='')
+
+    def __str__(self):
+        """ Str and print()"""
+        return "[Rectangle] ({}) {}/{} - {}/{}\
+".format(self.id, self.x, self.y, self.width, self.height)
