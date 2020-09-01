@@ -96,4 +96,13 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             for k, v in kwargs.items():
-                self.k = v
+                if k == "id":
+                    self.id = v
+                if k == "width":
+                    self.width = v
+                if k == "height":
+                    self.height = v
+                if k == 'x':
+                    self.x = v
+                if k == 'y':
+                    self.y = v
