@@ -80,16 +80,20 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}\
 ".format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Assign an argument to each attribute """
-        na = len(args)
-        if na >= 1:
-            self.id = args[0]
-        if na >= 2:
-            self.width = args[1]
-        if na >= 3:
-            self.height = args[2]
-        if na >= 4:
-            self.x = args[3]
-        if na >= 5:
-            self.y = args[4]
+        if args:
+            na = len(args)
+            if na >= 1:
+                self.id = args[0]
+            if na >= 2:
+                self.width = args[1]
+            if na >= 3:
+                self.height = args[2]
+            if na >= 4:
+                self.x = args[3]
+            if na >= 5:
+                self.y = args[4]
+        else:
+            for k, v in kwargs.items():
+                self.k = v
