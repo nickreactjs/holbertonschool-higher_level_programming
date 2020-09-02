@@ -42,9 +42,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """ Return an instance with all attributes already set. """
         from models.rectangle import Rectangle
         from models.square import Square
-        """ Return an instance with all attributes already set. """
         if cls == Rectangle:
             inst = Rectangle(1, 1)
         elif cls == Square:
