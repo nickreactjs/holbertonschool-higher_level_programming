@@ -31,3 +31,12 @@ class Base:
         with open("{}.json".format(cls.__name__), "w",
                   encoding="utf-8") as fil:
             fil.write(cls.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Return the list of the JSON string representation
+            json string. """
+        if not json_string:
+            return []
+        else:
+            return json.dumps(json_string)
