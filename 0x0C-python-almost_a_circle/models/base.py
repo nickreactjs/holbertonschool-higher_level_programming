@@ -36,7 +36,7 @@ class Base:
     def from_json_string(json_string):
         """ Return the list of the JSON string representation
             json string. """
-        if not json_string:
+        if not json_string or json_string is None:
             return []
         else:
             return json.dumps(json_string)
