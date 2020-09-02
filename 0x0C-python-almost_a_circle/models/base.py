@@ -38,5 +38,4 @@ class Base:
             json string. """
         if not json_string or json_string is None:
             return []
-        else:
-            return json.dumps(json_string)
+        return json.loads(json_string)
