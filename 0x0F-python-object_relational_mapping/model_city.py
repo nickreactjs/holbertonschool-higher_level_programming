@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define City class."""
+"""Define City ORM object."""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql.schema import ForeignKey
@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class City(Base):
-    """Define City class."""
+    """Define City ORM class."""
 
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, nullable=False,
