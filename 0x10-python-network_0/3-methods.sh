@@ -1,3 +1,3 @@
 #!/bin/bash
 # Send a DELETE request.
-curl -X DELETE "$1"
+curl -si -X OPTIONS "$1" | grep Allow | cut -d " " -f 2-100
