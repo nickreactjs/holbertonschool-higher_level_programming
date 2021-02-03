@@ -4,6 +4,6 @@ let s;
 if (isNaN(number)) {
   s = 'Not a number';
 } else {
-  s = number;
+  s = 'My number: ' + number;
 }
-console.log('My number: ' + s);
+console.log(s);
