@@ -1,25 +1,21 @@
 #!/usr/bin/node
-// retrieves all character names in SW film
 const request = require('request');
-const FILM_URL = `http://swapi.co/api/films/${process.argv[2]}`;
-let characters;
-const dict = {};
-request(FILM_URL, function (error, response, body) {
-  if (error) {
-    throw new Error(error);
-  }
-  characters = JSON.parse(body).characters;
-  for (const url of characters) {
-    request(url, (error, response, body) =>
-      !error && addData(url, JSON.parse(body).name));
+const url = `https://swapi-api.hbtn.io/api/films/${process.argv[2]}/`;
+const orderDict = {};
+request(url, (error, response, content) => {
+  if (!error) {
+    const people = JSON.parse(content).characters;
+    people.forEach((character) => {
+      request(character, (error, response, content) => {
+        if (!error) {
+          orderDict[character.split('/')[5]] = JSON.parse(content).name;
+          if (Object.entries(orderDict).length === people.length) {
+            Object.values(orderDict).forEach((element) => {
+              console.log(element);
+            });
+          }
+        }
+      });
+    });
   }
 });
-
-function addData (url, name) {
-  dict[url] = name;
-  if (Object.entries(dict).length === characters.length) {
-    for (const url of characters) {
-      console.log(dict[url]);
-    }
-  }
-}
