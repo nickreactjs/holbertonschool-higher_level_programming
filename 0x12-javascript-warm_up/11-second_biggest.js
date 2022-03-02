@@ -9,7 +9,7 @@ if (list.length === 0 || list.length === 1) {
 } else {
   while (i < list.length) {
     n = parseInt(list[i]);
-    if (n < max) {
+    if (n > max) {
       max = n;
       maxIndex = i;
     }
@@ -20,10 +20,9 @@ if (list.length === 0 || list.length === 1) {
   max = list[0];
   while (i < list.length) {
     n = parseInt(list[i]);
-    if (n < max) {
+    if (n > max) {
       max = n;
     }
     i += 1;
   }
-  console.log(max);
 }
