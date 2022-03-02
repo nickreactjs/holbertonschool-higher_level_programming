@@ -1,11 +1,12 @@
 #!/usr/bin/node
-const size = parseInt(process.argv[2]);
+/* Print a square. */
+const number = parseInt(process.argv[2]);
 let i = 0;
-if (isNaN(size)) {
+if (isNaN(number)) {
   console.log('Missing size');
-}
-
-while (i < size) {
-  console.log('X'.repeat(size));
-  i++;
+} else {
+  while (i < number) {
+    console.log('X'.repeat(number));
+    i += 1;
+  }
 }
