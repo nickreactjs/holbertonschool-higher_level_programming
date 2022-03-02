@@ -25,4 +25,5 @@ if (list.length === 0 || list.length === 1) {
     }
     i += 1;
   }
+  console.log(max);
 }
