@@ -8,15 +8,17 @@ module.exports = class Rectangle {
   }
 
   print () {
-    for (let i = 0; i < this.height; i++) {
+    let i = 0;
+    while (i < this.height) {
       console.log('X'.repeat(this.width));
+      i += 1;
     }
   }
 
   rotate () {
-    const swap = this.width;
+    const copy = this.width;
     this.width = this.height;
-    this.height = swap;
+    this.height = copy;
   }
 
   double () {
