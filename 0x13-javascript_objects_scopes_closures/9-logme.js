@@ -1,5 +1,8 @@
 #!/usr/bin/node
 exports.logMe = function (item) {
-  this.times = (this.times || 0) + 1;
-  console.log(`${this.times - 1}: ${item}`);
-};
+  if (!this.nb){
+    this.nb = 0;
+  }
+  console.log(`${this.nb}: ${item}`)
+  this.nb += 1;
+}
