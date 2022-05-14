@@ -1,7 +1,12 @@
 #!/usr/bin/node
-// makes get request and prints status code
-const request = require('request');
-request(process.argv[2], function (error, response, body) {
-  error && console.log(error);
-  response && console.log('code:', response.statusCode);
-});
+const axios = require('axios').default;
+
+axios.get(process.argv[2])
+  .then(function (response) {
+  // handle succes
+    console.log(`code: ${response.status}`);
+  })
+  .catch(function (error) {
+  // handle error
+    console.log(`code: ${error.response.status}`);
+  });
