@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const axios = require('axios');
-const dict = { 1: 0 };
+const dict = {};
 
 axios.get(process.argv[2])
   .then(function (response) {
