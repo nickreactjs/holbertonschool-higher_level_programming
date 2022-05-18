@@ -1,5 +1,16 @@
 #!/usr/bin/node
-// writes web page to file
+const axios = require('axios');
 const fs = require('fs');
-const request = require('request');
-request(process.argv[2]).pipe(fs.createWriteStream(process.argv[3]));
+const filename = process.argv[3];
+
+axios.get(process.argv[2])
+  .then(function (response) {
+    fs.writeFile(filename, response.data, 'utf-8', function (err, data) {
+      if (err) {
+        console.log(err);
+      }
+    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
