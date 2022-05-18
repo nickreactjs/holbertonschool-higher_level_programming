@@ -13,11 +13,6 @@ axios.get(process.argv[2])
         }
       }
     }
-    for (const key in dict) {
-      if (!key) {
-        dict[key] = 0;
-      }
-    }
     console.log(dict);
   })
   .catch(function (error) {
