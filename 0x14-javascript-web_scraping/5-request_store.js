@@ -5,7 +5,7 @@ const filename = process.argv[3];
 
 axios.get(process.argv[2])
   .then(function (response) {
-    fs.writeFile(filename, response.data, 'utf-8', function (err, data) {
+    fs.writeFile(filename, response.data, 'utf-8', function (err) {
       if (err) {
         console.log(err);
       }
